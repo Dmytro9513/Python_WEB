@@ -1,6 +1,7 @@
 from collections import UserDict
 from datetime import datetime, timedelta
 from abc import ABC, abstractmethod
+from datetime import datetime as dt
 import json
 import re
 
@@ -121,10 +122,12 @@ class AddressBook(UserDict):
 
     def add_record(self, record, *_):
         self.data.update({record.name.value: record})
+        self._log(f'Added record for {record.name.value}')
 
     def delete_record(self, contact_name):
         if str(contact_name) in self.data:
             del self.data[str(contact_name)]
+            self._log(f'Deleted record for {contact_name}')
             return None
 
     def _save(self):
@@ -200,6 +203,12 @@ class AddressBook(UserDict):
         except FileNotFoundError:
             with open('save.json', 'w'):
                 ...
+
+    def _log(self, action):
+        current_time = dt.strftime(dt.now(), '%H:%M:%S')
+        message = f'[{current_time}] {action}'
+        with open('logs.txt', 'a') as file:
+            file.write(f'{message}\n')
 
 
 class Record:
@@ -834,6 +843,7 @@ def command_phone_operations_check_decorator(command_function):
         command_function(*args, **kwargs)
 
     return wrapper
+
 
 
 # command vocab for curry
