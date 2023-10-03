@@ -147,6 +147,7 @@ class AddressBook(UserDict):
 
         with open('save.json', 'w') as writer:
             json.dump(file_data, writer, indent=4)
+        self._log('Saved address book')
 
     def iterator(self, n):
         counter = 0
@@ -168,6 +169,7 @@ class AddressBook(UserDict):
                 yield
 
         print('This was the end of the address book!')
+        self._log(f'Iterated through {n} records')
         return
 
     def _load(self):
@@ -176,6 +178,7 @@ class AddressBook(UserDict):
             with open('save.json') as reader:
                 try:
                     file_data = json.load(reader)
+                    self._log(f'Loaded {len(file_data)} records from save.json')
 
                     for item in file_data:
                         name = Name(item['name'])
@@ -199,10 +202,12 @@ class AddressBook(UserDict):
 
                 except json.decoder.JSONDecodeError:
                     file_data = []
+                    self._log('Failed to decode JSON in save.json')
 
         except FileNotFoundError:
             with open('save.json', 'w'):
                 ...
+            self._log('save.json not found, created a new file')
 
     def _log(self, action):
         current_time = dt.strftime(dt.now(), '%H:%M:%S')

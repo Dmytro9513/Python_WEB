@@ -22,3 +22,11 @@
 [01:30:51] Contact  has been added.
 [17:14:45] Added record for ivan
 [17:15:28] Deleted record for ivan
+[17:31:51] Loaded 0 records from save.json
+[17:32:14] Added record for Mila
+[17:33:38] Saved address book
+[17:34:16] Loaded 1 records from save.json
+[17:43:42] Saved address book
+[17:45:12] Successfully loaded notes from notes.json
+[17:45:12] Successfully loaded notes from notes.json
+[17:45:28] Successfully saved notes to notes.json

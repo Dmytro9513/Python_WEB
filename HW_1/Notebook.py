@@ -121,11 +121,14 @@ class Notebook: # Клас Notebook представляє собою колек
         data = [{'title': note.title, 'content': note.content, 'tags': note.tags} for note in self.notes]
         with open(self.filename, 'w') as file:
             json.dump(data, file)
+        self.log(f'Successfully saved notes to {self.filename}')
+
 
     def load_notes(self): # Завантажує нотатки з JSON-файлу.
         with open(self.filename, 'r') as file:
             data = json.load(file)
             self.notes = [Note(note['title'], note['content'], note['tags']) for note in data]
+        self.log(f'Successfully loaded notes from {self.filename}')
 
     def log(self, action):
         current_time = dt.strftime(dt.now(), '%H:%M:%S')
