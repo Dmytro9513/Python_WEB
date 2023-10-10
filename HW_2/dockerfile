@@ -1,0 +1,20 @@
+# Використовуй відповідну версію Python
+FROM python:3.8
+
+# Встановимо змінну середовища
+ENV APP_HOME /app
+
+
+# Встановимо робочу директорію всередині контейнера
+WORKDIR $APP_HOME
+
+# Копіюємо файли з локальної системи в контейнер
+COPY . .
+
+
+# Встановлюємо залежності з Pipfile
+RUN pip install pipenv && pipenv install --deploy --ignore-pipfile
+
+
+# Команда для запуску програми
+CMD ["pipenv", "run", "python", "jason.py"]

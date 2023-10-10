@@ -1,0 +1,36 @@
+[21:07:47] Addressbook has been loaded!
+[21:08:30] Addressbook has been loaded!
+[21:10:08] Contact Dmytro has been added.
+[21:10:08] Addressbook has been saved!
+[21:13:17] Addressbook has been loaded!
+[21:28:16] Contact Mila has been added.
+[21:30:46] Contact exit has been added.
+[21:34:30] Contact mila has been added.
+[00:35:27] Contact  has been added.
+[01:32:53] Contact  has been added.
+[11:20:58] Contact a has been added.
+[11:30:19] Contact  has been added.
+[12:01:52] Contact asd has been added.
+[00:20:05] Contact test has been added.
+[00:52:15] Note 'Title_test' added.
+[00:57:35] Note 'testpy' editing.
+[01:00:11] Note ['note.title'] editing.
+[01:02:21] Note testpy editing.
+[01:09:26] Contact  has been added.
+[01:17:20] Contact  has been added.
+[01:28:30] Contact  has been added.
+[01:30:51] Contact  has been added.
+[17:14:45] Added record for ivan
+[17:15:28] Deleted record for ivan
+[17:31:51] Loaded 0 records from save.json
+[17:32:14] Added record for Mila
+[17:33:38] Saved address book
+[17:34:16] Loaded 1 records from save.json
+[17:43:42] Saved address book
+[17:45:12] Successfully loaded notes from notes.json
+[17:45:12] Successfully loaded notes from notes.json
+[17:45:28] Successfully saved notes to notes.json
+[22:16:16] Loaded 9 records from save.json
+[22:18:49] Saved address book
+[22:19:08] Loaded 9 records from save.json
+[22:19:23] Saved address book
